@@ -74,7 +74,7 @@ services:
             args:
                 CRONTAB_FILE: ${CRONTAB_FILE}
                 ENV_FILE: ${ENV_FILE}
-                ISB_SITEMAP_PREFIX: https://${ISB_HOST}/${UVICORN_ROOT_PATH}
+                ISB_SITEMAP_PREFIX: https://${ISB_HOST}${UVICORN_ROOT_PATH}
                 ANALYTICS_DOMAIN: ${ANALYTICS_DOMAIN}
                 ANALYTICS_SRC: ${ANALYTICS_SRC}
                 DATACITE_PREFIX: ${DATACITE_PREFIX}
@@ -88,7 +88,7 @@ services:
             - db
         environment:
             - ISB_UVICORN_ROOT_PATH=${UVICORN_ROOT_PATH}
-            - ISB_SITEMAP_PREFIX=https://${ISB_HOST}/${UVICORN_ROOT_PATH}
+            - ISB_SITEMAP_PREFIX=https://${ISB_HOST}${UVICORN_ROOT_PATH}
         volumes:
             - sitemaps_data:/app/sitemaps
             - metadata_models:/app/metadata_models
