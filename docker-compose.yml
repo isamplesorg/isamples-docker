@@ -99,6 +99,7 @@ services:
             - datacite_password
             - hypothesis_jwt_client_id
             - hypothesis_jwt_client_secret
+            - orcid_token_secret
 
 
     solr_schema_init:
@@ -131,3 +132,5 @@ secrets:
         file: ./secrets/hypothesis_jwt_client_id
     hypothesis_jwt_client_secret:
         file: ./secrets/hypothesis_jwt_client_secret
+    orcid_token_secret:
+        file: ./secrets/orcid_token_secret
