@@ -100,6 +100,7 @@ services:
             - hypothesis_jwt_client_id
             - hypothesis_jwt_client_secret
             - orcid_token_secret
+            - orcid_superusers
 
 
     solr_schema_init:
@@ -134,3 +135,5 @@ secrets:
         file: ./secrets/hypothesis_jwt_client_secret
     orcid_token_secret:
         file: ./secrets/orcid_token_secret
+    orcid_superusers:
+        file: ./secrets/orcid_superusers
