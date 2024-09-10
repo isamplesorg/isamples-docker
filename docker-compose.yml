@@ -21,6 +21,7 @@ services:
             - "0.0.0.0:9187:9187"
         depends_on:
             - db
+        profiles: [isamples_central]
 
     solr:
         build: ./solr/
@@ -52,6 +53,7 @@ services:
         depends_on:
             solr:
                 condition: service_healthy
+        profiles: [isamples_central]
 
     node_exporter:
         image: quay.io/prometheus/node-exporter:latest
@@ -65,6 +67,7 @@ services:
             - '/:/host:ro,rslave'
         ports:
             - "0.0.0.0:9100:9100"
+        profiles: [isamples_central]            
 
 
 
